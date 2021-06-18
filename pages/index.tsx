@@ -22,7 +22,8 @@ const AuthButton = styled.button<AuthButtonProps>`
   font-weight: 700;
   :hover {
     background-color: ${(props) =>
-      props.btnType === "signup" ? "#0a70af" : "#dde7e9"};
+      props.btnType === "signup" ? "#0687d8" : "#e2f4f8"};
+    animation: 0.2s linear;
   }
   background-color: ${(props) =>
     props.btnType === "signup" ? "#1da1f2" : "#fff"};
@@ -143,6 +144,7 @@ const Home: NextPage<{}> = () => {
               src="/images/twitter-logo.svg"
               width="45"
               height="45"
+              draggable={false}
             ></StyledSmallTwitterLogo>
             <BigHeader>Happening now</BigHeader>
             <SmallHeader>Join Twitter today.</SmallHeader>
@@ -156,12 +158,14 @@ const Home: NextPage<{}> = () => {
               src={AuthPageBackgroundPNG}
               layout="fill"
               objectFit="cover"
+              draggable={false}
             ></Image>
             <TwitterLogoWrapper>
               <StyledBigTwitterLogo
                 src="/images/twitter-logo.svg"
                 width="360"
                 height="360"
+                draggable={false}
               ></StyledBigTwitterLogo>
             </TwitterLogoWrapper>
           </ImagesBlock>
