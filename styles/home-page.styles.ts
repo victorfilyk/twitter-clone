@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import DefaultButton from "../components/DefaultButton"
+import { mediaBreakpoints } from "../utils/media-breakpoints"
 
 export const MainWrapper = styled.main`
   display: flex;
@@ -14,7 +15,7 @@ export const MainBlock = styled.div`
   @media (max-width: 1367px) {
     height: 93vh;
   }
-  @media (max-width: 1030px) {
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     flex-direction: column;
   }
 `
@@ -22,9 +23,9 @@ export const MainBlock = styled.div`
 export const AuthBlock = styled.div`
   order: 2;
   height: 100%;
-  width: 50vw;
+  width: 45vw;
   padding: 215px 0 0 40px;
-  @media (max-width: 1030px) {
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     order: 1;
     width: 100vw;
     padding: 40px 225px 40px 225px;
@@ -34,9 +35,9 @@ export const AuthBlock = styled.div`
 export const ImagesBlock = styled.div`
   order: 1;
   height: 100%;
-  width: 50vw;
+  width: 55vw;
   position: relative;
-  @media (max-width: 1030px) {
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     order: 2;
     width: 100vw;
   }
@@ -46,7 +47,7 @@ export const BigHeader = styled.h2`
   font-weight: 700;
   font-size: 60px;
   line-height: 84px;
-  @media (max-width: 1030px) {
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     max-width: 400px;
   }
 `
@@ -68,14 +69,14 @@ export const AuthButtonsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  @media (max-width: 1030px) {
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     flex-direction: row;
     justify-content: space-around;
   }
 `
 
 export const AuthorizationButton = styled(DefaultButton)`
-  @media (max-width: 1030px) {
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     width: 255px;
   }
 `
@@ -98,7 +99,7 @@ export const NavbarContainer = styled.nav`
   flex-wrap: wrap;
   @media (max-width: 1367px) {
     height: 7vh;
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
   }
 `
 

@@ -17,7 +17,7 @@ import {
   NavbarLink,
   SmallHeader,
   AuthorizationButton
-} from "../styles/HomePage.styles"
+} from "../styles/home-page.styles"
 
 const Home: NextPage<{}> = () => {
   return (
@@ -51,29 +51,21 @@ const Home: NextPage<{}> = () => {
             </AuthButtonsWrapper>
           </AuthBlock>
           <ImagesBlock>
-            <div style={{height: "300px"}}>
-              <Image
-                src={AuthPageBackgroundPNG}
-                layout="fill"
-                objectFit="cover"
-                draggable={false}
-              ></Image>
-            </div>
+            <Image
+              src={AuthPageBackgroundPNG}
+              layout="fill"
+              objectFit="cover"
+              draggable={false}
+            ></Image>
             <BigTwitterLogoWrapper>
               <Image
                 src="/images/twitter-logo.svg"
-                // width="360"
-                // height="360"
-                width="230"
-                height="230"
+                width="360"
+                height="360"
                 draggable={false}
                 css={`
                   filter: invert(100%) sepia(23%) saturate(2%)
                     hue-rotate(113deg) brightness(106%) contrast(101%);
-                  /* @media (max-width: 1030px) {
-                    width: 230px;
-                    height: 230px;
-                  } */
                 `}
               ></Image>
             </BigTwitterLogoWrapper>
