@@ -1,18 +1,16 @@
 import styled from "styled-components"
 
-interface AuthorizationButtonProps {
+interface DefaultButtonProps {
   btnType: "signup" | "login"
-  width: string
-  height: string
 }
 
-const AuthorizationButton = styled.button<AuthorizationButtonProps>`
+const DefaultButton = styled.button<DefaultButtonProps>`
   cursor: pointer;
   border-radius: 30px;
   font-size: 15px;
   font-weight: 700;
-  width: ${props => props.width};
-  height: ${props => props.height};
+  width: 365px;
+  height: 45px;
   :hover {
     background-color: ${props =>
       props.btnType === "signup"
@@ -42,4 +40,4 @@ const AuthorizationButton = styled.button<AuthorizationButtonProps>`
       : ""};
 `
 
-export default AuthorizationButton
+export default DefaultButton

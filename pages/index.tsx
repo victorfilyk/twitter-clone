@@ -1,7 +1,6 @@
 import { NextPage } from "next"
 import Image from "next/image"
 import React from "react"
-import AuthorizationButton from "../components/AuthorizationButton"
 import Meta from "../components/Meta"
 import AuthPageBackgroundPNG from "../public/images/auth-page-background.png"
 import {
@@ -16,8 +15,9 @@ import {
   NavbarContainer,
   NavbarCopyrightSpan,
   NavbarLink,
-  SmallHeader
-} from "../styles/HomePage"
+  SmallHeader,
+  AuthorizationButton
+} from "../styles/HomePage.styles"
 
 const Home: NextPage<{}> = () => {
   return (
@@ -41,35 +41,39 @@ const Home: NextPage<{}> = () => {
             <AuthButtonsWrapper>
               <AuthorizationButton
                 btnType="signup"
-                width="365px"
-                height="45px"
                 css={`
                   margin-bottom: 20px;
                 `}
               >
                 Sign up
               </AuthorizationButton>
-              <AuthorizationButton btnType="login" width="365px" height="45px">
-                Log in
-              </AuthorizationButton>
+              <AuthorizationButton btnType="login">Log in</AuthorizationButton>
             </AuthButtonsWrapper>
           </AuthBlock>
           <ImagesBlock>
-            <Image
-              src={AuthPageBackgroundPNG}
-              layout="fill"
-              objectFit="cover"
-              draggable={false}
-            ></Image>
+            <div style={{height: "300px"}}>
+              <Image
+                src={AuthPageBackgroundPNG}
+                layout="fill"
+                objectFit="cover"
+                draggable={false}
+              ></Image>
+            </div>
             <BigTwitterLogoWrapper>
               <Image
                 src="/images/twitter-logo.svg"
-                width="360"
-                height="360"
+                // width="360"
+                // height="360"
+                width="230"
+                height="230"
                 draggable={false}
                 css={`
                   filter: invert(100%) sepia(23%) saturate(2%)
                     hue-rotate(113deg) brightness(106%) contrast(101%);
+                  /* @media (max-width: 1030px) {
+                    width: 230px;
+                    height: 230px;
+                  } */
                 `}
               ></Image>
             </BigTwitterLogoWrapper>

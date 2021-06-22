@@ -1,29 +1,11 @@
 import type { AppProps } from "next/app"
-import { createGlobalStyle } from "styled-components"
-
-const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-`
+import React from "react"
+import GlobalStyles from "../styles/Global.styles"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyles />
       <Component {...pageProps} />
     </>
   )
