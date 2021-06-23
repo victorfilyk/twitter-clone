@@ -12,11 +12,12 @@ export const MainWrapper = styled.main`
 export const MainBlock = styled.div`
   display: flex;
   height: 95vh;
-  @media (max-width: 1367px) {
-    height: 93vh;
+  @media (max-width: ${mediaBreakpoints.HomePage.xlg}) {
+    height: 91vh;
   }
   @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     flex-direction: column;
+    height: 100%;
   }
 `
 
@@ -24,11 +25,26 @@ export const AuthBlock = styled.div`
   order: 2;
   height: 100%;
   width: 45vw;
-  padding: 215px 0 0 40px;
+  position: relative;
+  padding-left: 30px;
   @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     order: 1;
+    position: static;
     width: 100vw;
-    padding: 40px 225px 40px 225px;
+    height: 530px;
+  }
+`
+
+export const AuthBlockContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
+    padding: 16px;
+    margin: 0 40px 0 40px;
+    position: static;
+    height: 100%;
+    width: 100vw;
   }
 `
 
@@ -39,23 +55,29 @@ export const ImagesBlock = styled.div`
   position: relative;
   @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
     order: 2;
-    width: 100vw;
+    display:none;
+  }
+`
+
+export const AuthPageBackgroundImageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
+    
   }
 `
 
 export const BigHeader = styled.h2`
-  font-weight: 700;
+  font-family: "Prompt";
   font-size: 60px;
-  line-height: 84px;
-  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
-    max-width: 400px;
-  }
+  line-height: 64px;
+  padding-right: 20px;
 `
 
 export const SmallHeader = styled.h4`
+  font-family: "Prompt";
   font-size: 31px;
   line-height: 36px;
-  font-weight: 700;
 `
 
 export const BigTwitterLogoWrapper = styled.div`
@@ -69,23 +91,17 @@ export const AuthButtonsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
-    flex-direction: row;
-    justify-content: space-around;
-  }
 `
 
 export const AuthorizationButton = styled(DefaultButton)`
-  @media (max-width: ${mediaBreakpoints.HomePage.lg}) {
-    width: 255px;
-  }
+  
 `
 
 export const NavbarBlock = styled.div`
   height: 5vh;
   padding: 0 10px 0 10px;
-  @media (max-width: 1367px) {
-    height: 7vh;
+  @media (max-width: ${mediaBreakpoints.HomePage.xlg}) {
+    height: 9vh;
   }
 `
 
@@ -97,8 +113,8 @@ export const NavbarContainer = styled.nav`
   height: 100%;
   margin: 0 auto;
   flex-wrap: wrap;
-  @media (max-width: 1367px) {
-    height: 7vh;
+  @media (max-width: ${mediaBreakpoints.HomePage.xlg}) {
+    height: 9vh;
     padding: 5px 0 5px 0;
   }
 `
@@ -106,7 +122,6 @@ export const NavbarContainer = styled.nav`
 export const NavbarLink = styled.a`
   font-size: 13px;
   line-height: 16px;
-  font-weight: 400;
   color: #5b7083;
   :hover {
     text-decoration: underline;
@@ -118,6 +133,5 @@ export const NavbarLink = styled.a`
 export const NavbarCopyrightSpan = styled.span`
   font-size: 13px;
   line-height: 16px;
-  font-weight: 400;
   color: #5b7083;
 `

@@ -1,6 +1,14 @@
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: "Prompt";
+    src: url("/fonts/Prompt-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+
   html,
   body {
     padding: 0;

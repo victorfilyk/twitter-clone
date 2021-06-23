@@ -16,7 +16,9 @@ import {
   NavbarCopyrightSpan,
   NavbarLink,
   SmallHeader,
-  AuthorizationButton
+  AuthorizationButton,
+  AuthBlockContainer,
+  AuthPageBackgroundImageWrapper
 } from "../styles/home-page.styles"
 
 const Home: NextPage<{}> = () => {
@@ -26,37 +28,43 @@ const Home: NextPage<{}> = () => {
       <MainWrapper>
         <MainBlock>
           <AuthBlock>
-            <Image
-              src="/images/twitter-logo.svg"
-              width="45"
-              height="45"
-              draggable={false}
-              css={`
-                filter: invert(52%) sepia(73%) saturate(1754%)
-                  hue-rotate(175deg) brightness(95%) contrast(101%);
-              `}
-            ></Image>
-            <BigHeader>Happening now</BigHeader>
-            <SmallHeader>Join Twitter today.</SmallHeader>
-            <AuthButtonsWrapper>
-              <AuthorizationButton
-                btnType="signup"
+            <AuthBlockContainer>
+              <Image
+                src="/images/twitter-logo.svg"
+                width="45"
+                height="45"
+                draggable={false}
                 css={`
-                  margin-bottom: 20px;
+                  filter: invert(52%) sepia(73%) saturate(1754%)
+                    hue-rotate(175deg) brightness(95%) contrast(101%);
                 `}
-              >
-                Sign up
-              </AuthorizationButton>
-              <AuthorizationButton btnType="login">Log in</AuthorizationButton>
-            </AuthButtonsWrapper>
+              ></Image>
+              <BigHeader>Happening now</BigHeader>
+              <SmallHeader>Join Twitter today.</SmallHeader>
+              <AuthButtonsWrapper>
+                <AuthorizationButton
+                  btnType="signup"
+                  css={`
+                    margin-bottom: 20px;
+                  `}
+                >
+                  Sign up
+                </AuthorizationButton>
+                <AuthorizationButton btnType="login">
+                  Log in
+                </AuthorizationButton>
+              </AuthButtonsWrapper>
+            </AuthBlockContainer>
           </AuthBlock>
           <ImagesBlock>
-            <Image
-              src={AuthPageBackgroundPNG}
-              layout="fill"
-              objectFit="cover"
-              draggable={false}
-            ></Image>
+            <AuthPageBackgroundImageWrapper>
+              <Image
+                src={AuthPageBackgroundPNG}
+                layout="fill"
+                objectFit="cover"
+                draggable={false}
+              ></Image>
+            </AuthPageBackgroundImageWrapper>
             <BigTwitterLogoWrapper>
               <Image
                 src="/images/twitter-logo.svg"
