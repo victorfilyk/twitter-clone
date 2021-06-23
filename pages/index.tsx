@@ -1,5 +1,6 @@
 import { NextPage } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 import Meta from "../components/Meta"
 import AuthPageBackgroundPNG from "../public/images/auth-page-background.png"
@@ -51,7 +52,9 @@ const Home: NextPage<{}> = () => {
                   Sign up
                 </AuthorizationButton>
                 <AuthorizationButton btnType="login">
-                  Log in
+                  <Link href="/login">
+                    <a>Log in</a>
+                  </Link>
                 </AuthorizationButton>
               </AuthButtonsWrapper>
             </AuthBlockContainer>
