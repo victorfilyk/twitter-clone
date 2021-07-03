@@ -22,6 +22,11 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
   * {
     box-sizing: border-box;
   }
